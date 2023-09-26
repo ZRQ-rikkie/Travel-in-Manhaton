@@ -61,8 +61,9 @@ Designed for tourists with limited time, our application leverages machine learn
 
 ### Database Integration
 <p align="center">
-  <img src="https://github.com/ZRQ-rikkie/Travel-in-Manhaton/assets/74203373/84721198-01ba-4b9a-b4b7-cbebb4bbd6e4”width="50%" />
+  <img src="https://github.com/ZRQ-rikkie/Travel-in-Manhaton/assets/74203373/84721198-01ba-4b9a-b4b7-cbebb4bbd6e4" width="50%" />
 </p>
+
 - **Reasons for Choosing PostgreSQL**: Geospatial support with PostGIS and a rich set of data types.
 - **Django ORM Integration**: Model definitions and simplified queries.
 - **Data Sources and Updates**: Weather forecasts, crowd flow predictions, POI info, and the mechanism to keep data up-to-date.
