@@ -1,4 +1,3 @@
-
 # Travel-in-Manhattan: Enhance Your NYC Experience
 
 A collaborative endeavor by a six-person team, this comprehensive app is designed to assist tourists in navigating New York City efficiently with the aid of machine learning predictions. Our team embraced the Scrum methodology to facilitate smooth collaboration, iterative development, and frequent feedback.
@@ -39,7 +38,9 @@ Designed for tourists with limited time, our application leverages machine learn
 ## Backend Design
 
 ### User Flow Design
-![User Flow](https://github.com/ZRQ-rikkie/Travel-in-Manhaton/assets/74203373/e96dde02-7a30-499b-aa34-618f4bc620fc)
+<p align="center">
+  <img src="https://github.com/ZRQ-rikkie/Travel-in-Manhaton/assets/74203373/e96dde02-7a30-499b-aa34-618f4bc620fc" width="50%" />
+</p>
 
 ### Server-side Logic
 - **Receive Requests**: Capturing user actions from the frontend.
@@ -53,10 +54,15 @@ Designed for tourists with limited time, our application leverages machine learn
   - **Traffic Forecast**: Use PredictZone & PredictPOI based on the user's location.
 - **Response**: Return data/results to the frontend.
   
-![Server Logic](https://github.com/ZRQ-rikkie/Travel-in-Manhaton/assets/74203373/3c906df6-6f65-484a-87b6-4887aecc4f7c)
+<p align="center">
+  <img src="https://github.com/ZRQ-rikkie/Travel-in-Manhaton/assets/74203373/3c906df6-6f65-484a-87b6-4887aecc4f7c" width="50%" />
+</p>
+
 
 ### Database Integration
-![Database Integration](https://github.com/ZRQ-rikkie/Travel-in-Manhaton/assets/74203373/84721198-01ba-4b9a-b4b7-cbebb4bbd6e4)
+<p align="center">
+  <img src="https://github.com/ZRQ-rikkie/Travel-in-Manhaton/assets/74203373/84721198-01ba-4b9a-b4b7-cbebb4bbd6e4”width="50%" />
+</p>
 - **Reasons for Choosing PostgreSQL**: Geospatial support with PostGIS and a rich set of data types.
 - **Django ORM Integration**: Model definitions and simplified queries.
 - **Data Sources and Updates**: Weather forecasts, crowd flow predictions, POI info, and the mechanism to keep data up-to-date.
