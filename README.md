@@ -1,116 +1,78 @@
-## Overview 
 
-**Background**:
-Tourists often have limited time to explore their destination cities. Recognizing this challenge, our 6-person team embarked on a project to assist tourists in navigating New York City more efficiently.
+# Travel-in-Manhattan: Enhance Your NYC Experience
 
-**Objective**:
-To develop a comprehensive mobile and web application that leverages machine learning predictions to guide users in making well-informed decisions, maximizing their sightseeing experience within the city's constraints.
+A collaborative endeavor by a six-person team, this comprehensive app is designed to assist tourists in navigating New York City efficiently with the aid of machine learning predictions. Our team embraced the Scrum methodology to facilitate smooth collaboration, iterative development, and frequent feedback.
 
-**Key Features**:
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Backend Design](#backend-design)
+  - [User Flow Design](#user-flow-design)
+  - [Server-side Logic](#server-side-logic)
+  - [Database Integration](#database-integration)
+- [Testing](#testing)
+- [Challenges & Solutions](#challenges-&-solutions)
+- [Feedback](#feedback)
 
-- **User Authentication**: Our application integrates a secure user registration and login system, ensuring personalized experiences and security for user data.
+## Overview
 
-- **Personalized Itinerary**: Users can effortlessly craft their own itinerary based on their interests and our busyness predictions, ensuring a tailored travel experience for each individual.
+Designed for tourists with limited time, our application leverages machine learning to guide users in making well-informed decisions, maximizing their sightseeing experience within NYC.
 
-- **Busyness Predictions**: The core of our application integrates two machine learning models: 
-  1. Predicting the busyness levels across different areas in Manhattan.
-  2. Offering insights on the anticipated busyness of specific Points of Interest (POIs).
-  
-- **Heat Map Visualization**: A user-friendly heat map showcases the predicted busyness levels, granting users a bird's-eye view of where crowds are expected.
+## Features
 
-- **Bucket List Functionality**: Users can curate and manage a list of places they'd like to visit, aided by our prediction insights.
+- **User Authentication**: Secure user registration and login system for personalized experiences.
+- **Personalized Itinerary**: Effortlessly craft itineraries based on interests and busyness predictions.
+- **Busyness Predictions**: 
+  - Predicts busyness levels in different areas of Manhattan.
+  - Offers insights on anticipated busyness at specific POIs.
+- **Heat Map Visualization**: Displaying predicted busyness levels.
+- **Bucket List Functionality**: Curate and manage a list of places to visit with prediction insights.
 
-**Tech Stack**:
+## Tech Stack
 
-- **Backend**: Developed with a Test Driven Development (TDD) approach using Django and PostgreSQL, ensuring the delivery of robust and scalable features.
-  
-- **Frontend**: Designed for both mobile and desktop devices, we used industry-standard technologies like React and React Native to ensure a responsive and adaptive user experience.
-
-- **Data & Predictive Modelling**: We employed Random Forest and Linear Regression techniques to build our two distinct prediction models, allowing for versatile and accurate predictions.
-  
-- **Deployment**: Leveraged AWS for hosting and deploying our applications to reach a wide audience.
-
-**Feedback**:
-Upon evaluation, our product achieved an average CSAT (Customer Satisfaction Score) of 8.75/10. Additionally, 75% of users indicated they would likely recommend our application to others.
+- **Backend**: Django and PostgreSQL with a Test Driven Development (TDD) approach.
+- **Frontend**: React (Web) and React Native (Mobile).
+- **Data & Predictive Modelling**: Random Forest and Linear Regression for accurate predictions.
+- **Deployment**: AWS 
 
 ## Backend Design
-### Basic User Flow Design
-* User login
-* view map
-* select tags
-* view related pois
-* Add pois to bucketlist
-* view itinerary in own bucketlist
-<div align="center">
-    <img src="https://github.com/ZRQ-rikkie/Travel-in-Manhaton/assets/74203373/e96dde02-7a30-499b-aa34-618f4bc620fc" width="70%"/>
-</div>
+
+### User Flow Design
+![User Flow](https://github.com/ZRQ-rikkie/Travel-in-Manhaton/assets/74203373/e96dde02-7a30-499b-aa34-618f4bc620fc)
 
 ### Server-side Logic
-* Receive Requests: Capture user actions from frontend.  
-* User Verification:
-  * Registration: Check if new, save data if unique.
-  * Login: Validate email & password, return token/session ID.
-  * Authentication: Validate user credentials for
-  * certain  actions (e.g., bucket list additions).
-* Data Processing:
-  * POI: Query relevant data from POI table.
-  * Weather: Access WeatherData for relevant info.
-  * Traffic Forecast: Use PredictZone & PredictPOI based on  the user's location.
-* Response:
-  * Send data/results back to frontend.
-<div align="center">
-    <img src="https://github.com/ZRQ-rikkie/Travel-in-Manhaton/assets/74203373/3c906df6-6f65-484a-87b6-4887aecc4f7c" width="70%"/>
-</div>
-
+- **Receive Requests**: Capturing user actions from the frontend.
+- **User Verification**:
+  - **Registration**: Check for uniqueness and save data.
+  - **Login**: Validate credentials and return a session ID or token.
+  - **Authentication**: Validate user credentials for specific actions (e.g., bucket list additions).
+- **Data Processing**:
+  - **POI**: Extract relevant data from POI table.
+  - **Weather**: Obtain relevant weather information.
+  - **Traffic Forecast**: Use PredictZone & PredictPOI based on the user's location.
+- **Response**: Return data/results to the frontend.
+  
+![Server Logic](https://github.com/ZRQ-rikkie/Travel-in-Manhaton/assets/74203373/3c906df6-6f65-484a-87b6-4887aecc4f7c)
 
 ### Database Integration
-<div align="center">
-    <img src="https://github.com/ZRQ-rikkie/Travel-in-Manhaton/assets/74203373/84721198-01ba-4b9a-b4b7-cbebb4bbd6e4" width="70%"/>
-</div>
+![Database Integration](https://github.com/ZRQ-rikkie/Travel-in-Manhaton/assets/74203373/84721198-01ba-4b9a-b4b7-cbebb4bbd6e4)
+- **Reasons for Choosing PostgreSQL**: Geospatial support with PostGIS and a rich set of data types.
+- **Django ORM Integration**: Model definitions and simplified queries.
+- **Data Sources and Updates**: Weather forecasts, crowd flow predictions, POI info, and the mechanism to keep data up-to-date.
 
-**Reasons for Choosing PostgreSQL**
-* Geospatial support with PostGIS
-* Rich set of data types
-  
-**Django ORM Integration**
-* Model Definitions
-* Simplified Queries
-  
-**Data Sources and Updates**
-* Data Sources: Weather forecasts, crowd flow  predictions, POI info.
-* Regular Data Updates: How data is kept current and accurate.
+## Testing
 
+- **Test-Driven Development (TDD)**: Ensures robustness from the start.
+- **Unit Testing with Pytest**: Validates individual components/functions.
+- **Integration Testing**: Ensures seamless interaction between integrated components.
+- **Test Reports**: Comprehensive reports for visualization of test results.
 
-### Testing
+## Challenges & Solutions
 
-**Test-Driven Development (TDD):**
-* Began coding with TDD to ensure robustness from the start.
-* Benefits: Clear requirements, early bug detection, and efficient code  structure.
-**Unit Testing with Pytest:**
-* Validated individual components/functions for expected behavior.
-* Isolated testing ensures core functionalities are solid.
-**Integration Testing:**
-* Tested interactions between integrated components.
-* Ensured seamless and error-free data flow and processes.
-**Test Reports:**
-* Generated comprehensive test reports.
-* Allowed easy visualization of test results, failures, and coverage.
+- **Handling Massive Geographic Coordinate Data**: Solutions include optimized storage, spatial indexing, and data simplification.
+- **Managing API Load with Over 200 POIs**: Solutions include time-based pagination, database query optimization, and using Redis for faster response times.
 
-### Key Challenges  & Our Solutions
+## Feedback
 
-**Handling Massive Geographic Coordinate Data**
-* Optimized Storage
-* Spatial Indexing:
-* Data Simplification
-  
-**Managing API Load with Over 200 POIs**
-* Time-based Pagination
-* Database Query Optimization
-* Redis to optimize the response time
-
-
-
-
-
-
-
+Our product achieved a CSAT score of 8.75/10. 75% of users would recommend our application to others.
