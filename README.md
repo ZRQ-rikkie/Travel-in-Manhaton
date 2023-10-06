@@ -1,7 +1,8 @@
 # Travel-in-Manhattan: Enhance Your NYC Experience
 
 A collaborative endeavor by a six-person team, this comprehensive app is designed to assist tourists in navigating New York City efficiently with the aid of machine learning predictions. Our team embraced the Scrum methodology to facilitate smooth collaboration, iterative development, and frequent feedback.
-![image](https://github.com/ZRQ-rikkie/Travel-in-Manhaton/assets/74203373/72ee9d60-bee0-48f6-b1e7-b10d99e2f1f4)
+![image](https://github.com/ZRQ-rikkie/Travel-in-Manhaton/assets/74203373/d98783fb-28b5-4dff-bf82-3d2de4be4105)
+
 
 
 ## Table of Contents
